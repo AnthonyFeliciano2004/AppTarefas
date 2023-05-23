@@ -3,8 +3,13 @@
     require('conexao.php');
     require('tarefas_service.php');
 
+<<<<<<< HEAD
    $acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
 
+=======
+
+    $acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
+>>>>>>> 5bcafffa5034574be59b15ecd92c3e9f8350c57c
 
     if ($acao == 'inserir'){
         $tarefa = new Tarefa();
@@ -29,6 +34,7 @@
         $conexao = new Conexao();
         $tarefaService = new TarefaService($conexao, $tarefa);
         if ($tarefaService->atualizar()){
+<<<<<<< HEAD
             if(isset($_GET['pag']) && $_GET['pag'] == 'index'){
                 header('location: index.php');
             } else {
@@ -71,5 +77,10 @@
         $tarefaService = new TarefaService($conexao, $tarefa);
         $tarefas = $tarefaService->recuperarTarefasPendentes();
        // header('location: index.php');
+=======
+            header('location: todas_tarefas.php');
+        }
+
+>>>>>>> 5bcafffa5034574be59b15ecd92c3e9f8350c57c
     }
 ?>

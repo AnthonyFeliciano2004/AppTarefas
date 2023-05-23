@@ -2,6 +2,10 @@
 	$acao = 'recuperar';
 	require ('tarefa_controler.php');
 
+<<<<<<< HEAD
+=======
+	echo $tarefa->tarefa
+>>>>>>> 5bcafffa5034574be59b15ecd92c3e9f8350c57c
 ?>
 
 <html>
@@ -57,6 +61,7 @@
 
 		// incluir form na pagina
 		tarefaDiv.insertBefore(form, tarefaDiv.childNodes[0]);
+<<<<<<< HEAD
 	}
 	function remover(id){
 		location.href = 'todas_tarefas.php?acao=remover&id=' + id;
@@ -65,6 +70,14 @@
 		location.href = 'todas_tarefas.php?acao=marcarRealizada&id='+id;
 	}
 		</script>
+=======
+
+	}
+
+
+		</script>
+
+>>>>>>> 5bcafffa5034574be59b15ecd92c3e9f8350c57c
 	</head>
 
 	<body>
@@ -100,6 +113,7 @@
 										class="col-sm-9" id="tarefa_<?php echo $tarefa->id?>"><?php echo $tarefa->tarefa?> (<?php echo $tarefa->status?>)
 									</div>
 									<div class="col-sm-3 mt-2 d-flex justify-content-between">
+<<<<<<< HEAD
 										<i class="fas fa-trash-alt fa-lg text-danger" onclick="remover(<?php echo $tarefa->id ?>)"></i>
 										
 										<?php if($tarefa->status == 'pendente'){?>
@@ -107,6 +121,14 @@
 											<i class="fas fa-check-square fa-lg text-success" onclick="marcarRelaizada(<?php echo $tarefa->id ?>)"></i>
 										<?php } ?>
 										</div>
+=======
+										<i class="fas fa-trash-alt fa-lg text-danger"></i>
+										<i class="fas fa-edit fa-lg text-info" onclick="editar (<?php echo $tarefa->id ?>, '<?php echo $tarefa->tarefa ?>')"></i>
+
+
+										<i class="fas fa-check-square fa-lg text-success"></i>
+									</div>
+>>>>>>> 5bcafffa5034574be59b15ecd92c3e9f8350c57c
 								</div>
 								<?php } ?>
 								

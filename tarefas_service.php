@@ -41,6 +41,7 @@
         }
 
         public function remover(){
+<<<<<<< HEAD
             $query= 'DELETE FROM tb_tarefa WHERE id = :id';
             $stmt = $this->conexao->prepare($query);
             $stmt->bindValue(':id', $this->tarefa->__get('id'));
@@ -66,5 +67,10 @@
                     $stmt->execute();
                     return $stmt->fetchAll(PDO::FETCH_OBJ);
         }
+=======
+            
+        }
+        
+>>>>>>> 5bcafffa5034574be59b15ecd92c3e9f8350c57c
     }
 ?>
